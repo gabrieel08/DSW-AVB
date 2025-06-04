@@ -1,16 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Detalhes from './pages/Detalhes';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import Header from "./Components/Header";
+import Home from "./pages/Home";
+import Favoritos from "./pages/Favoritos";
+import Detalhes from "./pages/Detalhes";
+
+export default function App() {
   return (
-    <Router>
+    <>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/favoritos" element={<Favoritos />} />
         <Route path="/detalhes/:code" element={<Detalhes />} />
       </Routes>
-    </Router>
+    </>
   );
 }
-
-export default App;
