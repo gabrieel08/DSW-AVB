@@ -1,3 +1,4 @@
+// src/components/CountryCard.jsx
 import React, { useContext } from "react";
 import { FavoritesContext } from "../context/FavoritesContext";
 import { Link } from "react-router-dom";
@@ -31,4 +32,4 @@ export default function CountryCard({ country }) {
       </div>
     </div>
   );
-}
+}   

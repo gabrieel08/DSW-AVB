@@ -8,7 +8,7 @@ export default function Detalhes() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://restcountries.com/v3.1/alpha/${code}`)
+    fetch("https://restcountries.com/v3.1/all")
       .then((res) => {
         if (!res.ok) throw new Error("Erro ao carregar país");
         return res.json();
